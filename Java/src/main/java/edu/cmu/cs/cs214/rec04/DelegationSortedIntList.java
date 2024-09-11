@@ -10,7 +10,9 @@ package edu.cmu.cs.cs214.rec04;
  */
 
 public class DelegationSortedIntList implements IntegerList {
+    // Keeps the total number of attempted insertions
     private int totalAdded;
+    // Keeps track of the number of times elements are attempted to be added
     private SortedIntList sortedIntList;
 
     public DelegationSortedIntList() {
@@ -88,6 +90,14 @@ public class DelegationSortedIntList implements IntegerList {
         return sortedIntList.size();
     }
 
+    /**
+     * Returns the total number of attempted element insertions.
+     *
+     * This method returns the number of times elements have been attempted to be
+     * added to the list, including duplicate insertions.
+     *
+     * @return the total number of attempted insertions
+     */
     public int getTotalAdded() {
         return this.totalAdded;
     }
