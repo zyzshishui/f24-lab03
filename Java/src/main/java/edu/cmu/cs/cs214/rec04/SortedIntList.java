@@ -10,7 +10,7 @@ import java.util.List;
  * @author Nora Shoemaker
  *
  */
-public abstract class SortedIntList extends AbstractIntList {
+public class SortedIntList extends AbstractIntList {
     private List<Integer> list;
     public SortedIntList() {
         this.list = new ArrayList<>();
