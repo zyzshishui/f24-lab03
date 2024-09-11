@@ -7,10 +7,24 @@ package edu.cmu.cs.cs214.rec04;
  * and exports an accessor (totalAdded) for this count.
  *
  * @author Nora Shoemaker
- *
  */
 
-public class InheritanceSortedIntList {
-    // Write your implementation below with API documentation
+public class InheritanceSortedIntList extends SortedIntList {
+    private int totalAdded;
 
+    /**
+     * Adds the specified int to the list.
+     *
+     * @param num an integer to be added to the list
+     * @return true if the list is changed as a result of the call
+     */
+    @Override
+    public boolean add(int num) {
+        this.totalAdded++;
+        return super.add(num);
+    }
+
+    public int getTotalAdded() {
+        return this.totalAdded;
+    }
 }
